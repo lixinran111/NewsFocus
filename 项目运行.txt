@@ -1,0 +1,7 @@
+终端运行npm run dev
+const articlesData = await fetch('news_data_with_paragraphs.json').then(res => res.json());
+            const anglesData = await fetch('merged_news_subthemes.json').then(res => res.json());
+            const clusteredData = await fetch('clustered_paragraphs_hdbscan2.json').then(res => res.json());
+            const similaritiesData = await fetch('paragraph_pairwise_similarities.json').then(res => res.json());
+            const similaritieSentencesData = await fetch('paragraph_sentence_similarities.json').then(res => res.json());
+一共5个文件
