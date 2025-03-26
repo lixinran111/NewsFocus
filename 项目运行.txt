@@ -5,3 +5,22 @@ const articlesData = await fetch('news_data_with_paragraphs.json').then(res => r
             const similaritiesData = await fetch('paragraph_pairwise_similarities.json').then(res => res.json());
             const similaritieSentencesData = await fetch('paragraph_sentence_similarities.json').then(res => res.json());
 一共5个文件
+
+
+如果想重新部署https://lixinran111.github.io/NewsFocus/：
+
+更改本地内容后
+构建项目：npm run build
+(dist会更新内容）
+使用 Git 的 --work-tree 参数将 dist 的内容提交到 gh-pages 分支
+git checkout --orphan gh-pages
+git rm -rf .
+git --work-tree=dist add --all
+git --work-tree=dist commit -m "Deploy to GitHub Pages"
+git push origin gh-pages --force
+
+查看https://github.com/lixinran111/NewsFocus/tree/gh-pages中的代码是否更新完成
+如果与本地一样查看https://lixinran111.github.io/NewsFocus/结果
+
+如何将最新的项目代码保存在main分支中：
+
